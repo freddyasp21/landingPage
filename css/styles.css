@@ -1,0 +1,763 @@
+:root {
+  --blanco: #fff;
+  --negro: #111;
+  --gris: #343a40;
+
+  --fuentePrincipal: "Raleway", sans-serif;
+  --fuenteSecundaria: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 32.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  margin: 0;
+  font-family: var(--fuentePrincipal);
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 5.8rem;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--fuenteSecundaria);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.contenedor {
+  margin: 0 auto;
+  width: 90%;
+}
+
+p {
+  line-height: 2;
+  font-family: var(--fuenteSecundaria);
+  margin: 0;
+}
+
+.btn {
+  background-color: #41759b;
+  width: 30rem;
+  height: 100%;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 2;
+  color: white;
+  font-weight: 600;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 300ms;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -o-transition: all 300ms;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  background-color: #264b66;
+}
+
+/* Utilidades */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+/* Grid */
+
+@media (min-width: 768px) {
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 80vh 80vh 80vh 80vh 25vh 40vh;
+  }
+
+  .header {
+    background-color: #fff;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
+  }
+
+  .header__contenedor {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .barra {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+
+  .logo {
+    padding: 2rem;
+    width: 30rem;
+    height: 100%;
+  }
+
+  .logo img {
+    height: 100%;
+  }
+
+  .navegacion {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .navegacion__link {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: var(--fuentePrincipal);
+    color: rgb(65, 117, 155);
+    transition: all ease 300ms;
+    -webkit-transition: all ease 300ms;
+    -moz-transition: all ease 300ms;
+    -ms-transition: all ease 300ms;
+    -o-transition: all ease 300ms;
+  }
+
+  .navegacion__link:hover {
+    color: #f1cb31;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+
+  .header__contenido {
+    width: 100%;
+    height: calc(100% - 30rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .header_titulo {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10rem;
+  }
+
+  .header__heading,
+  .footer__heading,
+  .enlances__titulo {
+    font-family: var(--fuentePrincipal);
+    font-size: 12rem;
+    margin: 0;
+    color: rgb(65, 117, 155);
+    align-self: start;
+  }
+
+  .header__parrafo {
+    margin: 0;
+    font-family: var(--fuentePrincipal);
+    font-size: 3.5rem;
+    line-height: 2.5;
+    font-weight: 400;
+  }
+
+  .header__botones {
+    align-self: start;
+    width: 60rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .btn__cta {
+    background-color: #f1cb31;
+  }
+
+  .btn__cta:hover {
+    background-color: #bea232ed;
+  }
+
+  .header__image {
+    width: calc(100% - 50%);
+    height: 100%;
+    background-image: url(/img/photoroom-PhotoRoom-PhotoRoom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -20rem center;
+  }
+
+  .waves {
+    position: absolute;
+    top: 808px;
+    left: -731px;
+    width: 140%;
+    height: 47rem;
+  }
+
+  /* feactures */
+
+  .feactures {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .feactures__contenedor,
+  .courses__contenedor,
+  .commentary__contenedor,
+  .contact__contenedor {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .feactures__heading,
+  .courses__heading,
+  .commentary__heading,
+  .banner__heading {
+    font-family: var(--fuentePrincipal);
+    font-size: 12rem;
+    margin: 0;
+    color: rgb(65, 117, 155);
+  }
+
+  .feactures__cards,
+  .courses__cards,
+  .commentary__cards {
+    width: 70%;
+    height: 100rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+
+  .feactures__Card,
+  .courses__Card,
+  .commentary__Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+  }
+
+  .feactures__Card:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    background-color: #e1e1e1;
+  }
+
+  .icono {
+    width: 30rem;
+    height: 30rem;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+  }
+
+  .card__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card__text h3 {
+    font-family: var(--fuentePrincipal);
+    font-size: 6rem;
+    margin: 0;
+    color: rgb(65, 117, 155);
+    text-transform: uppercase;
+  }
+
+  .card__parrafo {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  /* Courses */
+
+  .courses {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .courses__Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+  }
+
+  .courses__Card:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+
+  .course__image-1 {
+    width: 100%;
+    height: 50rem;
+    background-image: url(../img/kids-social-distancing-in-classroom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .course__image-2 {
+    width: 100%;
+    height: 50rem;
+    background-image: url(../img/student-with-flag.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .course__image-3 {
+    width: 100%;
+    height: 50rem;
+    background-image: url(../img/front-view-of-smiley-teenage-girl-with-headphones-during-online-school.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -90px;
+  }
+
+  .course__info {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  .course__info h4 {
+    font-family: var(--fuentePrincipal);
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0;
+    color: rgb(65, 117, 155);
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .time {
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    color: #b1b1b1;
+    text-align: center;
+    align-self: end;
+  }
+
+  .course__links {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .course__link {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #353431;
+  }
+
+  .buy-now {
+    display: inline-block;
+    background-color: #f1cb31;
+    padding: 1rem;
+    color: #fff;
+  }
+
+  .buy-now:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+
+  .creator {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .creator__info {
+    width: 30rem;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .creator__user {
+    display: block;
+    background-color: #41759b;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .creator__name h4 {
+    font-size: 2.5rem;
+  }
+
+  .creator__redes {
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .creator__redes img {
+    width: 10rem;
+  }
+
+  /* Commentary */
+
+  .commentary {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .commentary__cards {
+    width: 70%;
+    height: 100rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80rem;
+    gap: 5rem;
+  }
+
+  .courses__contenedor {
+    margin: 0 auto;
+  }
+
+  .commentary__cards {
+    position: relative;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 10rem;
+  }
+
+  .arrow:hover {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+
+  .r-arrow {
+    top: 192px;
+    right: -90px;
+  }
+
+  .i-arrow {
+    top: 192px;
+    left: -90px;
+  }
+
+  .commentary__Card {
+    position: relative;
+  }
+
+  .commentary__Card:hover {
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
+
+  .commentary__Card .icono {
+    width: 10rem;
+    height: 10rem;
+    align-self: start;
+  }
+
+  .commentary__Card .card__parrafo {
+    text-align: left;
+    color: #343a40;
+  }
+
+  .comillas {
+    position: absolute;
+    width: 10rem;
+    top: 0;
+    left: 0;
+  }
+
+  .commentary__author {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: #41759b;
+  }
+
+  /* Contact */
+
+  .contact {
+    background-color: #cdd2d6fb;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact__contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+  }
+
+  .contact__image {
+    width: calc(100% - 40%);
+    height: 135rem;
+    background-image: url(../img/woman-teaching-students-in-english-class-online.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact__contenido {
+    width: 40%;
+    height: 135rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .contact-parrafo {
+    color: #000;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 600;
+    font-size: 3.8rem;
+    text-align: justify;
+  }
+
+  /* Banner */
+
+  .banner {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+  }
+
+  .banner__contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .banner__heading {
+    font-size: 8rem;
+    text-shadow: none;
+    margin-bottom: 1rem;
+  }
+
+  .banner__parrafo {
+    font-size: 3rem;
+    color: rgb(65, 117, 155);
+    font-weight: 900;
+  }
+
+  .banner__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .banner__cta {
+    height: 20%;
+  }
+
+  .footer {
+    background-color: #838383;
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+  }
+
+  .footer__contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10rem;
+  }
+
+  .footer_grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10rem;
+  }
+
+  .footer__heading,
+  .enlances__titulo{
+    font-size: 8rem;
+    color: #fff;
+  }
+
+  .footer__parrafo{
+    color: #fff;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: justify;
+  }
+
+  .footer__texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+  }
+
+  .footer__redes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 10rem;
+  }
+
+  .footer__redes img{
+    width: 10rem;
+  }
+
+  .footer__enlaces{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+  }
+
+  .footer__enlaces a{
+    color: #fff;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 600;
+    font-size: 4rem;
+  }
+
+  .copyright{
+    background-color: black;
+    height: 10rem;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .copyright p{
+    font-size: 3rem;
+  }
+}
